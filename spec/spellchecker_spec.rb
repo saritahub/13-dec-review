@@ -53,4 +53,11 @@ RSpec.describe "SpellChecker" do
             expect {spellchecker.check(123)}.to raise_error "Please enter a string!"
         end 
     end 
+
+    context "It maintains the input case for correctly spelt words, and continues to highlight incorrect words" do
+        it "Returns the correctly spelt words in the same case" do 
+            spellchecker = SpellChecker.new 
+            expect(spellchecker.check("HELLO WHAT tImE Is It")).to eq("HELLO WHAT tImE Is It")
+        end  
+    end 
 end 
