@@ -30,5 +30,10 @@ RSpec.describe "SpellChecker" do
             spellchecker = SpellChecker.new 
             expect(spellchecker.check("Hello thre")).to eq("Hello ~thre~")
         end 
+
+        it "Sentence: Returns multiple words wrapped in tildas when spelt incorrectly" do
+            spellchecker = SpellChecker.new 
+            expect(spellchecker.check("Wht tme is it")).to eq("~Wht~ ~tme~ is it")
+        end 
     end 
 end 

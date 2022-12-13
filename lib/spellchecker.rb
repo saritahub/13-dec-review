@@ -1,6 +1,6 @@
 class SpellChecker
     def initialize
-        @dictionary = ["hello", "there"]
+        @dictionary = ["hello", "there", "what", "time", "is", "it"]
     end 
 
     def check(text)
