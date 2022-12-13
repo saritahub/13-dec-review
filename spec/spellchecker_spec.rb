@@ -24,4 +24,11 @@ RSpec.describe "SpellChecker" do
             expect(spellchecker.check("thre")).to eq("~thre~")
         end 
     end 
+
+    context "Multiple words in sentence" do 
+        xit "Sentence: Returns Hello ~thre~ when there is spelt incorrectly" do
+            spellchecker = SpellChecker.new 
+            expect(spellchecker.check("Hello thre")).to eq("Hello ~thre~")
+        end 
+    end 
 end 
