@@ -26,7 +26,7 @@ RSpec.describe "SpellChecker" do
     end 
 
     context "Multiple words in sentence" do 
-        xit "Sentence: Returns Hello ~thre~ when there is spelt incorrectly" do
+        it "Sentence: Returns Hello ~thre~ when there is spelt incorrectly" do
             spellchecker = SpellChecker.new 
             expect(spellchecker.check("Hello thre")).to eq("Hello ~thre~")
         end 

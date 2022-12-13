@@ -1,6 +1,6 @@
 class SpellChecker
     def initialize
-        @dictionary = ["Hello", "there"]
+        @dictionary = ["hello", "there"]
     end 
 
     def check(text)
@@ -10,6 +10,6 @@ class SpellChecker
             @dictionary.include?(word.downcase) ? word : "~#{word}~"       
         }.join(" ")
 
-        !@dictionary.include?(text) ? correct_spelling : text  
+        !@dictionary.include?(text) ? correct_spelling : text
     end 
 end 
