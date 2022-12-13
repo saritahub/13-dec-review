@@ -47,5 +47,10 @@ RSpec.describe "SpellChecker" do
             spellchecker = SpellChecker.new 
             expect {spellchecker.check(["Hello"])}.to raise_error "Please enter a string!"
         end 
+
+        it "When integer is input, it raises an error" do 
+            spellchecker = SpellChecker.new 
+            expect {spellchecker.check(123)}.to raise_error "Please enter a string!"
+        end 
     end 
 end 
