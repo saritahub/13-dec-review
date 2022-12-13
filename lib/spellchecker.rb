@@ -1,13 +1,20 @@
 class SpellChecker
     def initialize
-        @dictionary = ["Hello"]
+        @dictionary = ["Hello", "there"]
     end 
 
     def check(text)
-        if text.empty? || @dictionary.include?(text) 
-             return text 
-        else 
-            return "~#{text}~"
-        end 
+
+        input_text_arr = text.scan(/\w+/)
+
+        correct_spelling = input_text_arr.map {|word|
+        @dictionary.include?(word.downcase) ? word : "~#{word}~"       
+           }.join(" ")
+
+         if !@dictionary.include?(text)
+            correct_spelling
+         else 
+            text 
+         end 
     end 
 end 

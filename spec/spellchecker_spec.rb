@@ -18,5 +18,10 @@ RSpec.describe "SpellChecker" do
             spellchecker = SpellChecker.new 
             expect(spellchecker.check("ello")).to eq("~ello~")
         end 
+
+        it "Returns ~thre~ when there is spelt incorrectly" do
+            spellchecker = SpellChecker.new 
+            expect(spellchecker.check("thre")).to eq("~thre~")
+        end 
     end 
 end 
