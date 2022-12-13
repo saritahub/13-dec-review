@@ -12,4 +12,11 @@ RSpec.describe "SpellChecker" do
             expect(spellchecker.check("Hello")).to eq("Hello")
         end 
     end 
+
+    context "Returns incorrectly spelt word wrapped in a tilda" do 
+        it "Returns ~ello~ when the input is ello" do 
+            spellchecker = SpellChecker.new 
+            expect(spellchecker.check("ello")).to eq("~ello~")
+        end 
+    end 
 end 
