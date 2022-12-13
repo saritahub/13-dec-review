@@ -4,6 +4,8 @@ class SpellChecker
     end 
 
     def check(text)
+        fail "Please enter a string!" if text.class != String
+        
         input_text_arr = text.scan(/\w+/)
 
         correct_spelling = input_text_arr.map { |word|

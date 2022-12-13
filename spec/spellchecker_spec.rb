@@ -41,4 +41,11 @@ RSpec.describe "SpellChecker" do
             expect(spellchecker.check("We cannot accmmodate this toay")).to eq("We cannot ~accmmodate~ this ~toay~")
         end 
     end 
+
+    context "It raises an error if the input is not a string" do 
+        it "When array is input, it raises an error" do 
+            spellchecker = SpellChecker.new 
+            expect {spellchecker.check(["Hello"])}.to raise_error "Please enter a string!"
+        end 
+    end 
 end 
