@@ -41,6 +41,12 @@ RSpec.describe "Sum Scanner" do
             sum_scanner = SumScanner.new 
             expect(sum_scanner.calculate("3.5 + 2.5")).to eq(["3.5 + 2.5", 6.0])
         end 
+    end 
 
+    context "Negative numbers input" do 
+        it 'Includes negative numbers and returns array with sum' do 
+            sum_scanner = SumScanner.new 
+            expect(sum_scanner.calculate("-2 * 10")).to eq(["-2 * 10", -20.0])
+        end 
     end 
 end 
