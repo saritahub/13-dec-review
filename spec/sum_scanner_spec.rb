@@ -32,5 +32,10 @@ RSpec.describe "Sum Scanner" do
             expect(sum_scanner.calculate("5 * 2")).to eq(["5 * 2", 10.0])
         end 
 
+        it 'Multiply float: Expect 5.5 * 2 to return array with sum' do 
+            sum_scanner = SumScanner.new 
+            expect(sum_scanner.calculate("5.5 * 2")).to eq(["5.5 * 2", 11.0])
+        end 
+
     end 
 end 
