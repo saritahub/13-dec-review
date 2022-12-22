@@ -31,6 +31,12 @@ class SumScanner
 
             subtract_numbers = @first_number - @second_number
             ["#{input}", subtract_numbers]
+        elsif @input_to_string.include?("/")
+            @first_number = @string_input[0].to_f
+            @second_number = @string_input[2].to_f
+
+            divide_numbers = @first_number / @second_number
+            ["#{input}", divide_numbers]
         end 
 
     end 
