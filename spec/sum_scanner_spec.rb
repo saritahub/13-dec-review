@@ -54,4 +54,11 @@ RSpec.describe "Sum Scanner" do
             expect(sum_scanner.calculate("-20 / 2")).to eq(["-20 / 2", -10.0])
         end 
     end 
+
+    context "Edge cases" do 
+        it "Empty string returns array with 0" do
+            sum_scanner = SumScanner.new 
+            expect(sum_scanner.calculate("")).to eq(["", 0.0])
+        end 
+    end 
 end 

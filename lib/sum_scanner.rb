@@ -19,6 +19,8 @@ class SumScanner
             return ["1",1.0]
         elsif input == "20.5"
             return  ["20.5",20.5]
+        elsif input == ""
+            return ["", 0.0]
         elsif (@input_to_string.include?("/") && @input_to_string.include?("-")) || @input_to_string.include?("/")
             @first_number = @string_input[0].to_f
             @second_number = @string_input[2].to_f
