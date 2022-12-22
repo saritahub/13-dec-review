@@ -12,5 +12,10 @@ RSpec.describe "Sum Scanner" do
             expect(sum_scanner.calculate("20.5")).to eq(["20.5",20.5])
         end 
 
+        it 'Expect 1 + 1 to return array with sum' do 
+            sum_scanner = SumScanner.new 
+            expect(sum_scanner.calculate("1 + 1")).to eq(["1 + 1",2.0])
+        end 
+
     end 
 end 
