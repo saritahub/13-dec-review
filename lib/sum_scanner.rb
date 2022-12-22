@@ -37,6 +37,12 @@ class SumScanner
 
             divide_numbers = @first_number / @second_number
             ["#{input}", divide_numbers]
+        elsif @input_to_string.include?("*")
+            @first_number = @string_input[0].to_f
+            @second_number = @string_input[2].to_f
+
+            multiply_numbers = @first_number * @second_number
+            ["#{input}", multiply_numbers]
         end 
 
     end 
