@@ -7,7 +7,6 @@ class SumScanner
 
 
     def calculate(input)
-
         @input = input 
         @string_input.push(input)
 
