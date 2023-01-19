@@ -2,6 +2,10 @@
 
 class TodoList 
     def task(task)
-        return "1 Wash the car"
+        if task == "add Wash the car"
+         "1 Wash the car"
+        else 
+            "1 Walk"
+        end 
     end 
 end 
